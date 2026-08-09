@@ -30,9 +30,7 @@ export default function SettingsPanel({ config, onChange }: Props) {
           <button
             key={p}
             type="button"
-            onClick={() =>
-              onChange({ ...config, provider: p, model: config.model || DEFAULT_MODELS[p] })
-            }
+            onClick={() => onChange({ ...config, provider: p, model: DEFAULT_MODELS[p] })}
             className={`rounded-full border px-3 py-1.5 text-sm font-medium transition-colors ${
               config.provider === p
                 ? 'border-purple bg-purple-bg text-purple-text'
@@ -43,6 +41,19 @@ export default function SettingsPanel({ config, onChange }: Props) {
           </button>
         ))}
       </div>
+
+      <label className="mb-1 block text-xs font-medium text-ink-soft">Model</label>
+      <input
+        type="text"
+        value={config.model}
+        onChange={(e) => onChange({ ...config, model: e.target.value })}
+        placeholder={DEFAULT_MODELS[config.provider]}
+        className="mb-3 w-full rounded-lg border border-border bg-canvas px-3 py-2 text-sm outline-none focus:border-purple"
+      />
+      <p className="-mt-2 mb-3 text-xs text-ink-faint">
+        Free-tier model names change over time — if you get a "model not found" error, check
+        your provider's current model list and paste the exact name here.
+      </p>
 
       <label className="mb-1 block text-xs font-medium text-ink-soft">API key</label>
       <input
