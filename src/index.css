@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --color-ink: #14171f;
+  --color-ink-soft: #565a6c;
+  --color-ink-faint: #8b8e9c;
+  --color-canvas: #faf9f5;
+  --color-surface: #ffffff;
+  --color-border: #e7e4da;
+
+  --color-blue: #2f6fed;
+  --color-blue-bg: #eaf1fe;
+  --color-blue-text: #1b3e86;
+
+  --color-coral: #ff6b4a;
+  --color-coral-bg: #ffe9e3;
+  --color-coral-text: #b23f27;
+
+  --color-purple: #7c5cfc;
+  --color-purple-bg: #f0ecff;
+  --color-purple-text: #4a34a6;
+
+  --color-teal: #12b3a8;
+  --color-teal-bg: #e1fbf8;
+  --color-teal-text: #0b6e67;
+
+  --color-pink: #f0508c;
+  --color-pink-bg: #fde7ef;
+  --color-pink-text: #a32d5f;
+
+  --color-amber: #f5a623;
+  --color-amber-bg: #fff3dd;
+  --color-amber-text: #8a5a0b;
+
+  --color-green: #2fb673;
+  --color-green-bg: #e3f8ed;
+  --color-green-text: #1b6e44;
+}
+
+html {
+  background: var(--color-canvas);
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-sans);
+  color: var(--color-ink);
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-purple-bg);
+  color: var(--color-purple-text);
+}
