@@ -5,7 +5,7 @@ import { SYSTEM_PROMPT } from './promptTemplate'
 // These are editable in Settings; treat them as sensible starting points, not gospel.
 export const DEFAULT_MODELS: Record<ProviderConfig['provider'], string> = {
   groq: 'llama-3.3-70b-versatile',
-  gemini: 'gemini-2.5-flash',
+  gemini: 'gemini-3.6-flash',
 }
 
 export async function callAI(config: ProviderConfig, userPrompt: string): Promise<string> {
